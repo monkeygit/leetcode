@@ -4,11 +4,10 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class Subsets {
-	
+public class SubsetsII {
 	private List<List<Integer>> res = new ArrayList<List<Integer>>();
 	
-    public List<List<Integer>> subsets(int[] S) {
+    public List<List<Integer>> subsetsWithDup(int[] S) {
         boolean[] ax = new boolean[S.length];
         Arrays.sort(S);
         sub(0, S.length, S, ax);
@@ -33,9 +32,8 @@ public class Subsets {
     }
 	
 	public static void main(String[] args) {
-		Subsets test = new Subsets();
+		SubsetsII test = new SubsetsII();
 		int[] a = {1,2,2};
-		System.out.println(test.subsets(a).toString());
+		System.out.println(test.subsetsWithDup(a).toString());
 	}
-
 }
