@@ -4,16 +4,19 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Test {
-	
-	
-	public static void fuc(int[] n){
-		n[0] = 100;
-	}
+
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int[] n = {1};
-		Test.fuc(n);
-		System.out.println(n[0]);
+		String s = "Today is a nice day";
+		String[] res = null;
+		res = s.split(" ");
+		for(int i=0; i<res.length; i++){
+			System.out.println("["+res[i]+"]");
+			System.out.println(res[i] == null);
+			System.out.println(res[i].length());
+		}
+		System.out.println(res.length);
+		
 	}
 
 }
